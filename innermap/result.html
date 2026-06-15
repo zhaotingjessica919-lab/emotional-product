@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>InnerMap 预览 | 知我</title>
+    <link rel="stylesheet" href="/innermap/styles.css?v=innermap-ui-20260615c" />
+  </head>
+  <body data-page="result">
+    <main class="shell result-shell app-result-shell">
+      <section class="app-topbar">
+        <a class="back-link" href="/innermap/">‹</a>
+        <span class="brand-logo app-logo" aria-hidden="true">
+          <span class="logo-orbit"></span>
+          <span class="logo-path"></span>
+          <span class="logo-dot logo-dot-a"></span>
+          <span class="logo-dot logo-dot-b"></span>
+        </span>
+        <span>知我 InnerMap</span>
+      </section>
+
+      <section class="result-header app-result-header">
+        <h1>你的 InnerMap 初步画像</h1>
+        <p id="result-subtitle">基于信息与状态校准生成</p>
+      </section>
+
+      <article class="preview-card app-report-card" id="personality-card">
+        <div class="card-topline">
+          <span>性格底色</span>
+          <span id="profile-label">洞察与边界</span>
+        </div>
+        <div class="personality-hero">
+          <div>
+            <h2 id="profile-name">清醒边界型</h2>
+            <p id="profile-summary">你不是容易被环境带走的人。你敏感，但不软弱；想得深，也有自己的判断。</p>
+          </div>
+          <div class="moon-window" aria-hidden="true"></div>
+        </div>
+        <div class="trait-grid">
+          <section>
+            <h3>优点</h3>
+            <ul id="strength-list"></ul>
+          </section>
+          <section>
+            <h3>需要注意</h3>
+            <ul id="attention-list"></ul>
+          </section>
+        </div>
+        <blockquote id="personality-quote">你不是软弱的人。你内心其实有自己的判断，只是不一定马上说出来。</blockquote>
+      </article>
+
+      <article class="preview-card app-report-card state-card">
+        <div class="card-topline">
+          <span>当前状态</span>
+          <span>状态追踪</span>
+        </div>
+        <h2 id="state-name">紧绷但清醒</h2>
+        <p id="state-summary">你正处于高负荷运转中，保持清醒，但身心处于紧绷状态。</p>
+        <section class="state-block">
+          <h3>最近更明显的状态</h3>
+          <ul id="state-signals"></ul>
+        </section>
+        <section class="state-block">
+          <h3>真正消耗你的地方</h3>
+          <p id="state-drain">不是事情本身，而是长期处在粗糙、混乱、边界不清的环境里。</p>
+        </section>
+        <section class="state-block">
+          <h3>建议</h3>
+          <p id="state-action">先做一次小验证，不要等所有事都想明白。</p>
+        </section>
+      </article>
+
+      <aside class="wechat-panel app-wechat-panel">
+        <h2>领取完整版 InnerMap</h2>
+        <p>更完整的自我认知地图</p>
+        <div class="full-report-list">
+          <section><span>行动模式</span><p>如何做决定，把事做好</p></section>
+          <section><span>关系模式</span><p>亲密关系与互动风格</p></section>
+          <section><span>资源感</span><p>你的内在资源与外部支持</p></section>
+          <section><span>7天建议</span><p>具体可执行的调整方案</p></section>
+        </div>
+        <div class="qr-box compact-qr" id="qr-box">
+          <img src="/wechat-qr.png" alt="知我 InnerMap 微信二维码" />
+          <div class="qr-fallback">
+            <strong>微信扫码添加</strong>
+            <span>领取完整版报告</span>
+          </div>
+        </div>
+        <div class="avatar-benefit">
+          <span>当前参与可获得免费专属风格头像</span>
+          <i></i><i></i>
+        </div>
+        <button id="wechat-action" type="button">加微信领取完整版</button>
+        <p class="wechat-note">仅用于报告领取，信息将严格加密保护</p>
+      </aside>
+
+      <section class="disclaimer">
+        内容用于自我探索和日常决策辅助，不构成命运预测、心理诊断、医疗、法律或投资建议。
+      </section>
+    </main>
+    <script src="/innermap/app.js?v=innermap-ui-20260615c"></script>
+  </body>
+</html>

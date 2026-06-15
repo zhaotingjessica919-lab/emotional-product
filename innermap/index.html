@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>知我 InnerMap</title>
+    <link rel="stylesheet" href="/innermap/styles.css?v=innermap-ui-20260615c" />
+  </head>
+  <body data-page="home">
+    <main class="shell">
+      <section class="hero">
+        <div class="brand-row">
+          <span class="brand-logo" aria-hidden="true">
+            <span class="logo-orbit"></span>
+            <span class="logo-path"></span>
+            <span class="logo-dot logo-dot-a"></span>
+            <span class="logo-dot logo-dot-b"></span>
+          </span>
+          <span class="brand-name">知我 InnerMap</span>
+        </div>
+
+        <div class="hero-stage">
+          <div class="hero-content">
+            <h1>看见你的内在模式。</h1>
+            <p class="hero-copy">生成一份关于性格底色、风格意象与行动倾向的初步画像。</p>
+            <div class="pill-row" aria-label="产品价值">
+              <span>认识自己</span>
+              <span>陪伴提升</span>
+              <span>辅助参考</span>
+            </div>
+            <a class="hero-button" href="#inner-form">生成我的 InnerMap</a>
+          </div>
+
+          <div class="sample-carousel" aria-label="结果样本">
+            <article class="sample-card">
+              <span class="mini-label">性格底色</span>
+              <h2>清醒边界型</h2>
+              <p>你不是软弱随波逐流型。你敏感，但不软弱；想得深，也有自己的判断。真正消耗你的不是事情本身，而是长期处在粗糙、含糊或不尊重边界的环境里。</p>
+              <div class="sample-tags">
+                <span>判断</span>
+                <span>边界</span>
+                <span>复盘</span>
+              </div>
+            </article>
+
+            <article class="sample-card">
+              <span class="mini-label">风格意象</span>
+              <h2>水木意象</h2>
+              <p>水木会让你更舒服、更自在。你适合更轻、更自然、更有呼吸感的表达：干净的绿色、流动的蓝、植物感、留白和柔和的光。</p>
+              <div class="sample-visual" aria-hidden="true">
+                <span class="visual-token water"></span>
+                <span class="visual-token wood"></span>
+                <span class="visual-token mint"></span>
+              </div>
+            </article>
+
+            <article class="sample-card">
+              <span class="mini-label">视觉生成</span>
+              <h2>头像与背景图</h2>
+              <p>把风格意象转成头像、微信背景图和个人风格卡，让内在模式有一个可见的样子。</p>
+              <div class="visual-preview-wrap" aria-hidden="true">
+                <div class="sample-avatar-art">
+                  <span></span>
+                </div>
+                <div class="sample-wallpaper-art">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-panel" id="inner-form" aria-label="生成 InnerMap">
+        <div class="app-brandbar">
+          <span class="brand-logo app-logo" aria-hidden="true">
+            <span class="logo-orbit"></span>
+            <span class="logo-path"></span>
+            <span class="logo-dot logo-dot-a"></span>
+            <span class="logo-dot logo-dot-b"></span>
+          </span>
+          <span>知我 InnerMap</span>
+        </div>
+        <div class="panel-heading">
+          <h2>生成你的初步画像</h2>
+          <p>输入出生时间坐标，生成你的初步 InnerMap。</p>
+        </div>
+
+        <form id="birth-form" class="birth-form">
+          <div class="form-step" id="birth-step">
+            <div class="time-input-group">
+              <div class="date-row compact-date-row">
+                <div class="toggle-cluster">
+                  <span class="field-label">日期类型</span>
+                  <div class="segmented-toggle" aria-label="日期类型">
+                    <label>
+                      <input type="radio" name="calendarType" value="solar" checked />
+                      <span>阳历</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="calendarType" value="lunar" />
+                      <span>阴历</span>
+                    </label>
+                  </div>
+                </div>
+
+                <label class="birth-date-field">
+                  出生日期
+                  <input name="birthDate" type="date" required />
+                </label>
+              </div>
+
+              <label class="birth-time-field">
+                出生时段
+                <select name="birthTime" required>
+                  <option value="" disabled selected>请选择</option>
+                  <option value="zi">23:00-00:59</option>
+                  <option value="chou">01:00-02:59</option>
+                  <option value="yin">03:00-04:59</option>
+                  <option value="mao">05:00-06:59</option>
+                  <option value="chen">07:00-08:59</option>
+                  <option value="si">09:00-10:59</option>
+                  <option value="wu">11:00-12:59</option>
+                  <option value="wei">13:00-14:59</option>
+                  <option value="shen">15:00-16:59</option>
+                  <option value="you">17:00-18:59</option>
+                  <option value="xu">19:00-20:59</option>
+                  <option value="hai">21:00-22:59</option>
+                </select>
+              </label>
+
+              <div class="birth-location-field">
+                <span class="field-label">出生地点</span>
+                <div class="location-parts">
+                  <select name="birthProvince" required aria-label="出生省份"></select>
+                  <select name="birthCity" required aria-label="出生城市"></select>
+                </div>
+                <p class="solar-time-hint" id="solar-time-hint">
+                  选择出生地点后，会提示是否需要做真太阳时复核。
+                </p>
+              </div>
+            </div>
+
+            <div class="toggle-cluster gender-toggle-wrap">
+              <span class="field-label">性别</span>
+              <div class="segmented-toggle gender-segmented" aria-label="性别">
+                <label>
+                  <input type="radio" name="gender" value="female" checked />
+                  <span>女</span>
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="male" />
+                  <span>男</span>
+                </label>
+              </div>
+            </div>
+
+            <label>
+              昵称或备注
+              <input name="nickname" type="text" maxlength="24" placeholder="可选，领取结果时使用" />
+            </label>
+          </div>
+
+          <div class="calibration-step" id="calibration-step" hidden>
+            <div class="calibration-intro">
+              <div class="calibration-progress">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p class="calibration-count">1 / 3</p>
+              <h2>选择最准确的状态</h2>
+              <p id="calibration-context"></p>
+            </div>
+
+            <div class="dynamic-questions" id="dynamic-questions"></div>
+
+            <button id="next-question" type="button">下一步</button>
+            <button class="ghost-button" id="back-to-birth" type="button">返回修改出生信息</button>
+          </div>
+
+          <button id="start-calibration" type="button">生成我的 InnerMap</button>
+          <button id="submit-report" type="submit" hidden>生成我的 InnerMap 预览</button>
+          <p class="form-note">
+            仅用于自我探索，信息将严格加密保护。
+          </p>
+        </form>
+      </section>
+    </main>
+    <script src="/innermap/location-data.js?v=innermap-ui-20260615c"></script>
+    <script src="/innermap/app.js?v=innermap-ui-20260615c"></script>
+  </body>
+</html>
